@@ -3,8 +3,9 @@ package com.daniela.zapateriamvc.base;
 import java.time.LocalDate;
 
 public class Zapato {
-    private String marca;
+
     private String modelo;
+    private String marca;
     private int talla;
     private LocalDate fechaIngreso;
 
