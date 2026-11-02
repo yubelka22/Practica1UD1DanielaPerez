@@ -7,23 +7,23 @@ import javax.swing.*;
 
 public class Vista {
     private JPanel panel1;
-    private JRadioButton zapatoDeportivoRadioButton;
-    private JRadioButton zapatoFormalRadioButton;
-    private JTextField marcaTxt;
-    private JTextField modeloTxt;
-    private JTextField tallaTxt;
-    private JLabel suelaMaterialLbl;
-    private JTextField suelaMaterialTxt;
-    private JButton nuevoButton;
-    private JButton importarButton;
-    private JButton exportarButton;
-    private JButton eliminarButton;
-    private JList list1;
-    private DatePicker fechaIngresoDPicker;
+    public JRadioButton zapatoDeportivoRadioButton;
+    public JRadioButton zapatoFormalRadioButton;
+    public JTextField marcaTxt;
+    public JTextField modeloTxt;
+    public JTextField tallaTxt;
+    public JLabel suelaMaterialLbl;
+    public JTextField suelaMaterialTxt;
+    public JButton nuevoButton;
+    public JButton importarButton;
+    public JButton exportarButton;
+    public JButton eliminarButton;
+    public JList list1;
+    public DatePicker fechaIngresoDPicker;
 
     //creados por mi
     public JFrame frame;
-    public DefaultListModel<Zapato> dlmvehiculo;
+    public DefaultListModel<Zapato> dlmzapato;
 
     public Vista() {
         frame = new JFrame("Zapatos MVC");
@@ -37,7 +37,7 @@ public class Vista {
     }
 
     private void initComponents() {
-        dlmvehiculo= new DefaultListModel<Zapato>();
+        dlmzapato= new DefaultListModel<Zapato>();
         list1.setModel(dlmzapato);
     }
 }
