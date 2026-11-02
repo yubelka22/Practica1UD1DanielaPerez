@@ -24,6 +24,7 @@ public class ZapatoFormal extends Zapato{
 
     @Override
     public String toString() {
-        return "ZapatoFormal:"  + getMarca() + " "  + getModelo() + " " + getTalla();
+        return "ZapatoFormal: " + getMarca() + " " + getModelo() + " " + getTalla()
+                + " " + getFechaIngreso() + " " + getMaterial();
     }
 }

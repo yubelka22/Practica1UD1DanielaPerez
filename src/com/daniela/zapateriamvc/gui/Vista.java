@@ -30,9 +30,13 @@ public class Vista {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE );
         frame.pack();
+        frame.setSize(850, 700);
         frame.setVisible(true);
         //centrar
         frame.setLocationRelativeTo(null);
+
+        ImageIcon img = new ImageIcon("img/zapato.png");
+        frame.setIconImage(img.getImage());
         initComponents();
     }
 

@@ -25,6 +25,7 @@ public class ZapatoDeportivo extends Zapato{
 
     @Override
     public String toString() {
-        return "ZapatoDeportivo:"  + getMarca() + " "  + getModelo() + " " + getTalla();
+        return "ZapatoDeportivo: " + getMarca() + " " + getModelo() + " " + getTalla()
+                + " " + getFechaIngreso() + " " + getTipoSuela();
     }
 }
