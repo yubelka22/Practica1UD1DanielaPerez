@@ -161,9 +161,18 @@ public class Controlador implements ActionListener, ListSelectionListener, Windo
             case "Zapato Deportivo":
                 vista.suelaMaterialLbl.setText("Tipo de Suela:");
                 break;
+            case "Eliminar":
+                try {
+                    Zapato unZapato = (Zapato) vista.list1.getSelectedValue();
+                    modelo.eliminar(unZapato);
+                    limpiarCampos();
+                    refrescar();
+                } catch (ArrayIndexOutOfBoundsException ae) {
+                    Util.mensajeError("Selecciona un zapato a eliminar");
+                }
+                break;
         }
     }
-
     @Override
     public void valueChanged(ListSelectionEvent e) {
         if (e.getValueIsAdjusting()) {

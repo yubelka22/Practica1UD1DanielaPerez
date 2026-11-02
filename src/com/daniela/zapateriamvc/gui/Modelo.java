@@ -57,6 +57,11 @@ public class Modelo {
         return false;
     }
 
+    //eliminar
+    public void eliminar(Zapato unZapato) {
+        listaZapatos.remove(unZapato);
+    }
+
     //exportar
     public void exportar(File fichero) throws ParserConfigurationException, TransformerException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
