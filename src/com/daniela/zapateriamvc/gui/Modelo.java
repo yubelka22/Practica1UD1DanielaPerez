@@ -143,13 +143,15 @@ public class Modelo {
                 nuevoZapatoDeportivo.setTipoSuela(nodoZapato.getChildNodes().item(4).getTextContent());
                 listaZapatos.add(nuevoZapatoDeportivo);
             } else {
-                nuevoZapatoFormal = new ZapatoFormal();
-                nuevoZapatoFormal.setMarca(nodoZapato.getChildNodes().item(0).getTextContent());
-                nuevoZapatoFormal.setModelo(nodoZapato.getChildNodes().item(1).getTextContent());
-                nuevoZapatoFormal.setTalla(Integer.parseInt(nodoZapato.getChildNodes().item(2).getTextContent()));
-                nuevoZapatoFormal.setFechaIngreso(LocalDate.parse(nodoZapato.getChildNodes().item(3).getTextContent()));
-                nuevoZapatoFormal.setMaterial(nodoZapato.getChildNodes().item(4).getTextContent());
-                listaZapatos.add(nuevoZapatoFormal);
+                if (nodoZapato.getTagName().equals("ZapatoFormal")) {
+                    nuevoZapatoFormal = new ZapatoFormal();
+                    nuevoZapatoFormal.setMarca(nodoZapato.getChildNodes().item(0).getTextContent());
+                    nuevoZapatoFormal.setModelo(nodoZapato.getChildNodes().item(1).getTextContent());
+                    nuevoZapatoFormal.setTalla(Integer.parseInt(nodoZapato.getChildNodes().item(2).getTextContent()));
+                    nuevoZapatoFormal.setFechaIngreso(LocalDate.parse(nodoZapato.getChildNodes().item(3).getTextContent()));
+                    nuevoZapatoFormal.setMaterial(nodoZapato.getChildNodes().item(4).getTextContent());
+                    listaZapatos.add(nuevoZapatoFormal);
+                }
             }
         }
     }
