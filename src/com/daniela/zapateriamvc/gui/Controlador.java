@@ -187,7 +187,6 @@ public class Controlador implements ActionListener, ListSelectionListener, Windo
                 vista.zapatoDeportivoRadioButton.doClick();
 
                 ImageIcon icono = new ImageIcon("img/deportivo.png");
-                System.out.println("Ancho de la imagen: " + icono.getIconWidth());
                 Image imagenEscalada = icono.getImage().getScaledInstance(250, 200, Image.SCALE_SMOOTH);
                 vista.imagenZapatoLabel.setIcon(new ImageIcon(imagenEscalada));
             } else {
@@ -195,7 +194,6 @@ public class Controlador implements ActionListener, ListSelectionListener, Windo
                 vista.zapatoFormalRadioButton.doClick();
 
                 ImageIcon icono = new ImageIcon("img/formal.png");
-                System.out.println("Ancho de la imagen: " + icono.getIconWidth());
                 Image imagenEscalada = icono.getImage().getScaledInstance(220, 180, Image.SCALE_SMOOTH);
                 vista.imagenZapatoLabel.setIcon(new ImageIcon(imagenEscalada));
             }

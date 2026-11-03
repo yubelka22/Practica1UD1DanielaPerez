@@ -47,15 +47,6 @@ public class Modelo {
         listaZapatos.add(nuevoZapatoFormal);
     }
 
-    //existeTalla
-    public boolean existeTalla(int talla) {
-        for (Zapato unZapato : listaZapatos) {
-            if (unZapato.getTalla() == talla) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     //eliminar
     public void eliminar(Zapato unZapato) {
