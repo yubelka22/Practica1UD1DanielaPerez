@@ -11,6 +11,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -184,13 +185,22 @@ public class Controlador implements ActionListener, ListSelectionListener, Windo
             if (zapatoSeleccionado instanceof ZapatoDeportivo) {
                 vista.suelaMaterialTxt.setText(((ZapatoDeportivo) zapatoSeleccionado).getTipoSuela());
                 vista.zapatoDeportivoRadioButton.doClick();
+
+                ImageIcon icono = new ImageIcon("img/deportivo.png");
+                System.out.println("Ancho de la imagen: " + icono.getIconWidth());
+                Image imagenEscalada = icono.getImage().getScaledInstance(250, 200, Image.SCALE_SMOOTH);
+                vista.imagenZapatoLabel.setIcon(new ImageIcon(imagenEscalada));
             } else {
                 vista.suelaMaterialTxt.setText(((ZapatoFormal) zapatoSeleccionado).getMaterial());
                 vista.zapatoFormalRadioButton.doClick();
+
+                ImageIcon icono = new ImageIcon("img/formal.png");
+                System.out.println("Ancho de la imagen: " + icono.getIconWidth());
+                Image imagenEscalada = icono.getImage().getScaledInstance(220, 180, Image.SCALE_SMOOTH);
+                vista.imagenZapatoLabel.setIcon(new ImageIcon(imagenEscalada));
             }
         }
     }
-
     @Override
     public void windowClosing(WindowEvent e) {
         int resp = Util.mensajeConfirmacion("¿Desea cerrar la ventana?", "Salir");

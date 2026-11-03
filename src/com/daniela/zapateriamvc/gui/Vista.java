@@ -20,6 +20,7 @@ public class Vista {
     public JButton eliminarButton;
     public JList list1;
     public DatePicker fechaIngresoDPicker;
+    public JLabel imagenZapatoLabel;
 
     //creados por mi
     public JFrame frame;
@@ -43,5 +44,8 @@ public class Vista {
     private void initComponents() {
         dlmzapato= new DefaultListModel<Zapato>();
         list1.setModel(dlmzapato);
+        imagenZapatoLabel.setPreferredSize(new java.awt.Dimension(250, 200));
+        panel1.revalidate();
+        panel1.repaint();
     }
 }
